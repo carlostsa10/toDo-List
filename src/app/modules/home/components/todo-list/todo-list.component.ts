@@ -30,7 +30,6 @@ export class TodoListComponent implements OnInit {
     const confirm = window.confirm("Tem certeza que deseja deletar todos os itens??")
     if(confirm){
       this.taskList = [];
-
     }
   }
 

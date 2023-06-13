@@ -18,7 +18,12 @@ ngOnInit(): void {
 }
 
 public submitItemTask(){
-  this.emitItemTask.emit(this.addItemTaskList);
-  this.addItemTaskList = "";
+
+  this.addItemTaskList = this.addItemTaskList.trim();
+  if(this.addItemTaskList) {
+    this.emitItemTask.emit(this.addItemTaskList);
+    this.addItemTaskList = "";
+
+  }
 }
 }
